@@ -1,59 +1,82 @@
-/* Basic CSS Reset */
+/* Reset */
 * {
-    margin: 15px;
-    padding: 15px;
-    text-align: center;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+}
+
+
+/* Default Body*/
+body * {
+    font-family: 'Inter', sans-serif;
+    color: #ffffff;
 }
 
 /* Body Styling */
 body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background: #f9f9f9;
-    color: #222;
-    min-height: 100vh;
-    line-height: 1.6;
+    /*
+    background-image: url(./assets/.);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    */
+
+    /*short-hand or shortcut - transformation in an unique propertie*/
+    background: url(./assets/background-image/bg-desktop.jpg) no-repeat top center/cover;
 }
 
-/* Container */
-.container {
-    max-width: 600px;
-    margin: 40px auto;
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 2px 16px rgba(0,0,0,0.07);
-    padding: 32px 24px;
+/* Container Styling */
+#container {
+    width: 360px;
+    margin: auto;
+    margin: 56px auto 0px;
+    padding: 0px 24px;
 }
 
-/* Link List */
-.link-list {
+/* Element father */
+#profile {
+    text-align: center;
+    padding: 24px;
+}
+
+/* Profile image Styling */
+#profile img{
+    width: 112px;
+}
+
+/* Profile text Styling */
+#profile p {
+    font-weight: 500;
+    line-height: 24px;
+    margin-top: 8px;
+}
+
+/* Parent element of the <UL> */
+ul {
     list-style: none;
-    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
-.link-list li {
-    margin-bottom: 18px;
-}
-
-.link-list a {
-    display: block;
-    padding: 14px 20px;
-    background: #e3e8ff;
-    color: #2a3a7c;
+/* Links Styling */
+ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 24px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 8px;
+    -webkit-backdrop-filter: blur(4px);
     text-decoration: none;
     font-weight: 500;
-    transition: background 0.2s, color 0.2s;
+    transition: background 0.2s ease;
 }
 
-.link-list a:hover {
-    background: #2a3a7c;
-    color: #fff;
+ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1.3px solid rgba(255, 255, 255, 0.8);
 }
 
-/* Responsive */
-@media (max-width: 700px) {
-    .container {
-        padding: 18px 8px;
-    }
-}
+/* Site: CSS Tricks or Can I Use */
