@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-us" class="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>By-me links</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src=""></script>
   </head>
   <body>
     <div id="container">
@@ -12,28 +13,51 @@
         <img src="./assets/profile-image/Avatar.png" alt="Sua foto de perfil" />
         <p>@jvitorcsm</p>
       </div>
+      <div id="switch" onclick="toggleMode()">
+        <button></button>
+        <span></span>
+      </div>
       <ul id="list">
         <li>
           <a href="#">Discovery my portfolio</a>
         </li>
         <li>
-          <a href="https://www.linkedin.com/in/jvitorcsm" target="_blank">My LinkeDin</a>
+          <a href="https://www.linkedin.com/in/jvitorcsm" target="_blank"
+            >My LinkeDin</a
+          >
         </li>
         <li>
-          <a href="https://www.github.com/jvitorcsm" target="_blank">My GitHub</a>
+          <a href="https://www.github.com/jvitorcsm" target="_blank"
+            >My GitHub</a
+          >
         </li>
       </ul>
       <div id="social-links">
-        <ion-icon name="heart"></ion-icon>
+        <a href="http://www.instagram.com/jvitorcsm" target="_blank">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a>
+        <a href="http://www.x.com/jvitorcsm" target="_blank">
+          <ion-icon name="logo-twitter"></ion-icon>
+        </a>
+        <a href="http://www.reddit.com/user/jvitorcsm" target="_blank">
+          <ion-icon name="logo-reddit"></ion-icon>
+        </a>
+        <a href="https://steamcommunity.com/profiles/76561199196554349" target="_blank">
+          <ion-icon name="logo-steam"></ion-icon>
+        </a>
       </div>
     </div>
-    <script 
-    type="module" 
-    src="https://unpkg.com/ionicons@undefined/dist/ionicons/ionicons.esm.js">
-  </script>
-    <script 
-    nomodule 
-    src="https://unpkg.com/ionicons@undefined/dist/ionicons/ionicons.js">
-  </script>
+    <footer>
+      João Vitor © 2025
+    </footer>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="./script.js"></script>
   </body>
 </html>
