@@ -1,174 +1,206 @@
 /* Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
 
 /* Root default page */
 :root {
-    --text-color: white;
-    --background-color: rgba(255, 255, 255, 0.1);
-    --border-color: rgba(255, 255, 255, 0.8);
-    --color-hover: rgba(255, 255, 255, 0.2);
-    --border-color-hover: rgba(255, 255, 255, 0.8);
-    --bg-url: url(./assets/background-image/bg-desktop.jpg);
-    --color-footer: rgba(255, 255, 255, 0.2);
-    --switch-button: url(./assets/switch-mode/moon-icon.svg);
+  --text-color: white;
+  --background-color: rgba(255, 255, 255, 0.1);
+  --border-color: rgba(255, 255, 255, 0.8);
+  --color-hover: rgba(255, 255, 255, 0.2);
+  --border-color-hover: rgba(255, 255, 255, 0.8);
+  --bg-url: url(./assets/background-image/bg-desktop.jpg);
+  --color-footer: rgba(255, 255, 255, 0.2);
+  --switch-button: url(./assets/switch-mode/moon-icon.svg);
 }
 
 /* Light Mode
 This is the light mode theme, which can be toggled by adding the class "light*/
 .light {
-    --text-color: black;
-    --background-color: rgba(0, 0, 0, 0.1);
-    --border-color: rgba(0, 0, 0, 0.8);
-    --color-hover: rgba(0, 0, 0, 0.2);
-    --border-color-hover: rgba(0, 0, 0, 0.8);
-    --bg-url: url(./assets/background-image/bg-desktop-light.jpg);
-    --color-footer: rgba(0, 0, 0, 0.2);
-    --switch-button: url(./assets/switch-mode/sun-icon.svg);
+  --text-color: black;
+  --background-color: rgba(0, 0, 0, 0.1);
+  --border-color: rgba(0, 0, 0, 0.8);
+  --color-hover: rgba(0, 0, 0, 0.2);
+  --border-color-hover: rgba(0, 0, 0, 0.8);
+  --bg-url: url(./assets/background-image/bg-desktop-light.jpg);
+  --color-footer: rgba(0, 0, 0, 0.2);
+  --switch-button: url(./assets/switch-mode/sun-icon.svg);
 }
 
 /* Default Body*/
 body * {
-    font-family: 'Inter', sans-serif;
-    color: var(--text-color);
+  font-family: "Inter", sans-serif;
+  color: var(--text-color);
 }
 
 /* Body Styling */
 body {
-    /*
+  /*
     background-image: url(./assets/.);
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
     */
 
-    /*short-hand or shortcut - transformation in an unique propertie*/
-    background: var(--bg-url) no-repeat top center/cover;
+  /*short-hand or shortcut - transformation in an unique propertie*/
+  background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
 }
 
 /* Container Styling */
 #container {
-    width: 360px;
-    margin: auto;
-    margin: 56px auto 0px;
-    padding: 0px 24px;
+  width: 100%;
+  max-width: 588px;
+  margin: auto;
+  margin: 56px auto 0px;
+  padding: 0px 24px;
 }
 
 /* Element father */
 #profile {
-    text-align: center;
-    padding: 24px;
+  text-align: center;
+  padding: 24px;
 }
 
 /* Profile image Styling */
-#profile img{
-    width: 112px;
+#profile img {
+  width: 112px;
 }
 
 /* Profile text Styling */
 #profile p {
-    font-weight: 500;
-    line-height: 24px;
-    margin-top: 8px;
+  font-weight: 500;
+  line-height: 24px;
+  margin-top: 8px;
 }
-
 
 /*Switch mode Style*/
 #switch {
-    position: relative;
-    width: 64px;
-    margin: 0 auto;
+  position: relative;
+  width: 64px;
+  margin: 0 auto;
 }
 
 #switch button {
-    width: 32px;
-    height: 32px;
-    background: white var(--switch-button) no-repeat center;
-    border-radius: 50%;
-    border: none;
-    cursor: pointer;
-    position: absolute;
-    z-index: 1;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  background: white var(--switch-button) no-repeat center;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  animation: slide-out 0.2s;
+}
+
+#switch button:hover{
+  outline: 8px solid var(--background-color);
 }
 
 .light #switch button {
-    right: 0;
-    left: initial;
+  animation: slide-in 0.4s forwards;
 }
 
 #switch span {
-    display: block;
-    width: 64px;
-    height: 24px;
-    background: var(--background-color);
-    border: 1px solid var(--border-color);
-    -webkit-backdrop-filter: blur(4px);
-    border-radius: 9999px;
+  display: block;
+  width: 64px;
+  height: 24px;
+  background: var(--background-color);
+  border: 1px solid var(--border-color);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 9999px;
 }
 
 /* Parent element of the <UL> */
 ul {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    padding: 24px 0px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px 0px;
 }
 
 /* Links Styling */
 ul li a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 16px 24px;
-    border: 1px solid var(--border-color);
-    background: var(--background-color);
-    border-radius: 8px;
-    -webkit-backdrop-filter: blur(4px);
-    text-decoration: none;
-    font-weight: 500;
-    transition: background 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 24px;
+  border: 1px solid var(--border-color);
+  background: var(--background-color);
+  border-radius: 8px;
+  -webkit-backdrop-filter: blur(4px);
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.2s ease;
 }
 
 ul li a:hover {
-    background: var(--color-hover);
-    border: 1.3px solid var(--border-color-hover);
+  background: var(--color-hover);
+  border: 1.3px solid var(--border-color-hover);
 }
 
 /* Social Links */
 #social-links {
-    display: flex;
-    gap: 22px;
-    justify-content: center;
-    font-size: 40px;
-    padding: 24px 0px;
+  display: flex;
+  gap: 22px;
+  justify-content: center;
+  font-size: 40px;
+  padding: 24px 0px;
 }
 
 #social-links a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 8px;
-    transition: background 0.5s ease;
-    border-radius: 50%;
-}   
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  transition: background 0.5s ease;
+  border-radius: 50%;
+}
 
 #social-links a:hover {
-    background-color: var(--background-color);
+  background-color: var(--background-color);
 }
 
 footer {
-    color: var(--color-footer);
-    padding: 16px;
-    text-align: center;
-    font-size: 14px;
+  color: var(--color-footer);
+  padding: 16px;
+  text-align: center;
+  font-size: 14px;
 }
 
 /* Site: CSS Tricks or Can I Use */
+
+/* media queries */
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assets/background-image/bg-mobile.jpg);
+  }
+  .light {
+    --bg-url: url(./assets/background-image/bg-mobile-light.jpg);
+  }
+}
+
+/* animation */
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+@keyframes slide-out {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
+  }
+}

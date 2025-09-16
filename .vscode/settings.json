@@ -14,8 +14,6 @@
   "explorer.compactFolders": false,
   // workbench
   "workbench.editor.enablePreview": false,
-  "workbench.iconTheme": "material-icon-theme",
-  "workbench.colorTheme": "Omni",
 
   // prettier
   "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -27,10 +25,10 @@
   // terminal
   "terminal.integrated.fontSize": 12,
   "terminal.integrated.profiles.windows": {
-  "Git Bash": {
-    "source": "Git Bash"
-  }
-},
+    "Git Bash": {
+      "source": "Git Bash"
+    }
+  },
   "terminal.integrated.profiles.osx": {
     "zsh": {
       "path": "zsh"
